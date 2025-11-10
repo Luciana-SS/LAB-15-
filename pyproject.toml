@@ -1,0 +1,26 @@
+[project]
+name = "lab-integrado-bibliotecas-principios"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "ipykernel>=7.0.1",
+    "matplotlib>=3.10.7",
+    "nbformat>=5.10.4",
+    "pandas>=2.3.3",
+    "plotly>=6.4.0",
+    "rich>=14.2.0",
+    "seaborn>=0.13.2",
+    "ucimlrepo>=0.0.7",
+]
+
+[tool.ruff]
+line-length = 88
+indent-width = 4
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style  = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
+docstring-code-format = true
+docstring-code-line-length = "dynamic"
