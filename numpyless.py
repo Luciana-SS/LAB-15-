@@ -1,13 +1,13 @@
 """
 ╔════════════════════════════════════════════════════════════════════════╗
-║                            📐 NumpyLess                                ║
+║                             NumpyLess                                ║
 ║                  Pure Python Linear Algebra Library                    ║
 ║                      (NumPy-less, stress-more!)                        ║
 ╚════════════════════════════════════════════════════════════════════════╝
 
 Una biblioteca minimalista de álgebra lineal que implementa operaciones
 tipo NumPy usando solo Python puro. ¡Perfecta para entender qué pasa
-"bajo el capó"!
+"bajo el cap
 
 Uso Recomendado:
     import numpyless as npl
@@ -51,6 +51,7 @@ def zeros(shape: tuple[int, int]) -> Matriz:
     matriz_0 = np.zeros(a, b)
     return matriz_0
 
+
 def ones(shape: tuple[int, int]) -> Matriz:
     """Crea una matriz rellena de unos.
 
@@ -72,6 +73,7 @@ def ones(shape: tuple[int, int]) -> Matriz:
     a, b = shape
     matriz_1 = np.ones(a, b)
     return matriz_1
+
 
 def identity(n: int) -> Matriz:
     """Crea una matriz identidad cuadrada.
