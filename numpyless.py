@@ -47,7 +47,7 @@ def zeros(shape: tuple[int, int]) -> Matriz:
     Pista: Usa listas por comprensión anidadas
     """
     raise NotImplementedError("Función no implementada.")
-    a, b = forma
+    a, b = shape
     matriz_0 = np.zeros(a, b)
     return matriz_0
 
@@ -69,7 +69,9 @@ def ones(shape: tuple[int, int]) -> Matriz:
     Pista: Similar a zeros() pero con 1.0
     """
     raise NotImplementedError("Función no implementada.")
-
+    a, b = shape
+    matriz_1 = np.ones(a, b)
+    return matriz_1
 
 def identity(n: int) -> Matriz:
     """Crea una matriz identidad cuadrada.
