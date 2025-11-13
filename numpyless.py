@@ -70,9 +70,7 @@ def ones(shape: tuple[int, int]) -> Matriz:
     Pista: Similar a zeros() pero con 1.0
     """
     raise NotImplementedError("Función no implementada.")
-    a, b = shape
-    matriz_1 = np.ones(a, b)
-    return matriz_1
+
 
 
 def identity(n: int) -> Matriz:
