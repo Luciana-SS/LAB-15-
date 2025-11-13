@@ -13,7 +13,7 @@ Uso Recomendado:
     import numpyless as npl
 
     # O para máxima ironía:
-    import numpyless as np  # ¡Cuidado con esto! 😈
+    import numpyless as np  # ¡Cuidado con esto!
 
 Tipos de Datos:
 - Vector: list[float] - Un array 1D de flotantes
@@ -47,7 +47,9 @@ def zeros(shape: tuple[int, int]) -> Matriz:
     Pista: Usa listas por comprensión anidadas
     """
     raise NotImplementedError("Función no implementada.")
-
+    a, b = forma
+    matriz_0 = np.zeros(a, b)
+    return matriz_0
 
 def ones(shape: tuple[int, int]) -> Matriz:
     """Crea una matriz rellena de unos.
