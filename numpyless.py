@@ -47,9 +47,7 @@ def zeros(shape: tuple[int, int]) -> Matriz:
     Pista: Usa listas por comprensión anidadas
     """
     raise NotImplementedError("Función no implementada.")
-    a, b = shape
-    matriz_0 = np.zeros(a, b)
-    return matriz_0
+    
 
 
 def ones(shape: tuple[int, int]) -> Matriz:
