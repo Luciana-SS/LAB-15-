@@ -52,7 +52,7 @@ def zeros(shape: tuple[int, int]) -> Matriz:
 
 
 def ones(shape: tuple[int, int]) -> Matriz:
-    matriz = []
+    matriz_unos = []
     columnas = shape[1]
     filas = shape[0]
     columna = []
@@ -61,9 +61,9 @@ def ones(shape: tuple[int, int]) -> Matriz:
         columna.append(1.0)
 
     for i in range(columnas):
-        matriz.append(columna)
+        matriz_unos.append(columna)
 
-    return matriz
+    return matriz_unos
 
 
 
@@ -158,12 +158,12 @@ def transpose(A: Matriz) -> Matriz:
 
 def dot(v: Vector, w: Vector) -> float:
     if len(v) == len(w):
-        resultado = 0.0
+        producto_punto = 0.0
         for n, m in zip(v, w):
             producto = n * m
-            resultado += producto
+            producto_punto += producto
 
-        return resultado
+        return producto_punto
 
     else:
         raise ValueError("Los vectores tienen dimensiones diferentes")
@@ -388,5 +388,6 @@ def det(A: Matriz) -> float:
     - Caso 3×3+: expansión por primera fila (recursivo)
     """
     raise NotImplementedError("Función no implementada.")
+
 
 
