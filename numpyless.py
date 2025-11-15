@@ -46,13 +46,10 @@ def ones(shape: tuple[int, int]) -> Matriz:
     columnas = shape[1]
     filas = shape[0]
     columna = []
-
     for i in range(filas):
         columna.append(1.0)
-
     for i in range(columnas):
         matriz_unos.append(columna)
-
     return matriz_unos
 
 
@@ -144,9 +141,7 @@ def dot(v: Vector, w: Vector) -> float:
         for n, m in zip(v, w):
             producto = n * m
             producto_punto += producto
-            
         return producto_punto
-
     else:
         raise ValueError("Los vectores tienen dimensiones diferentes")
             
@@ -246,6 +241,19 @@ def norm(v: Vector) -> float:
 
 
 def add_matrices(A: Matriz, B: Matriz) -> Matriz:
+    matriz_suma = []
+    contador = 0
+    if len(A) == len(B) and len(A[0]) == len(B[0]):
+        for fila_A, fila_B in zip(A, B):
+            matriz_suma.append([])
+            for elemento_A, elemento_B in zip(fila_A, fila_B):
+                suma = elemento_A + elemento_B
+                matriz_suma[contador].append(suma)
+            contador += 1
+        return matriz_suma
+    else:
+        raise ValueError("Las matrices no se pueden sumar")
+        
     """Suma dos matrices elemento a elemento.
 
     Equivalente en NumPy: A + B
@@ -377,6 +385,7 @@ def det(A: Matriz) -> float:
     - Caso 3×3+: expansión por primera fila (recursivo)
     """
     raise NotImplementedError("Función no implementada.")
+
 
 
 
