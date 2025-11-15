@@ -157,29 +157,18 @@ def transpose(A: Matriz) -> Matriz:
 
 
 def dot(v: Vector, w: Vector) -> float:
-    """Calcula el producto punto (producto escalar) de dos vectores.
+    if len(v) == len(w):
+        resultado = 0.0
+        for n, m in zip(v, w):
+            producto = n * m
+            resultado += producto
 
-    Fórmula: v · w = v[0]*w[0] + v[1]*w[1] + ... + v[n]*w[n]
+        return resultado
 
-    Equivalente en NumPy: np.dot(v, w)
-
-    Args:
-        v: El primer vector.
-        w: El segundo vector.
-
-    Returns:
-        float: El resultado del producto punto.
-
-    Raises:
-        ValueError: Si los vectores no tienen la misma dimensión.
-
-    Ejemplo:
-        >>> dot([1, 2, 3], [4, 5, 6])
-        32.0  # = 1*4 + 2*5 + 3*6
-
-    Pista: Usa sum() y zip()
-    """
-    raise NotImplementedError("Función no implementada.")
+    else:
+        raise ValueError("Los vectores tienen dimensiones diferentes")
+            
+            
 
 
 def add(v: Vector, w: Vector) -> Vector:
@@ -399,4 +388,5 @@ def det(A: Matriz) -> float:
     - Caso 3×3+: expansión por primera fila (recursivo)
     """
     raise NotImplementedError("Función no implementada.")
+
 
