@@ -211,8 +211,21 @@ def add(v: Vector, w: Vector) -> Vector:
 
     Pista: Usa listas por comprensión con zip()
     """
-    raise NotImplementedError("Función no implementada.")
+    
+    dimension_v = len(v)
+    dimension_w = len(w)
 
+    if dimension_v != dimension_w:
+        raise ValueError ("los vectores no tienen la misma dimensión")
+
+    vector = []
+
+    for vector1, vector2 in zip(v, w):
+        suma = vector1 + vector2
+        vector.append(suma)
+
+    return vector
+    
 
 def multiply(c: float, v: Vector) -> Vector:
     """Multiplica cada elemento de un vector por un escalar.
