@@ -95,7 +95,21 @@ def identity(n: int) -> Matriz:
 
     Pista: La diagonal tiene 1.0 cuando fila == columna
     """
-    raise NotImplementedError("Función no implementada.")
+    columnas = n
+    filas = n
+
+    matriz_identidad = []
+
+    for i in range (filas):
+        fila = []
+        for j in range (columnas):
+            if j == i:
+                fila.append(1)
+            else:
+                fila.append(0)
+        
+        matriz_identidad.append(fila)
+    return matriz_identidad
 
 
 # -------------------------------------------------------------------
