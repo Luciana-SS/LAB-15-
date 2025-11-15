@@ -317,7 +317,23 @@ def multiply_matrix(c: float, A: Matriz) -> Matriz:
 
     Pista: Similar a multiply() pero para cada fila
     """
-    raise NotImplementedError("Función no implementada.")
+
+    filas = len (A)
+    columnas = len(A[0])
+
+    Matriz = []
+
+    for i in range (filas):
+        nueva_fila = []
+        for j in range (columnas):
+            dato = A[i][j]
+            multiplicacion = c * dato
+            nueva_fila.append(multiplicacion)
+
+        Matriz.append(nueva_fila)
+
+    return Matriz
+
 
 
 def matmul(A: Matriz, B: Matriz | Vector) -> Matriz | Vector:
