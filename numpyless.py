@@ -120,25 +120,17 @@ def shape(A: Matriz) -> tuple[int, int]:
 
 
 def transpose(A: Matriz) -> Matriz:
-    """Devuelve la transpuesta de una matriz A.
+    filas = len(A)        
+    columnas = len(A[0]) 
+    transpuesta = []
+    for j in range(columnas):
+        nueva_fila = []  
+        for i in range(filas):
+            nueva_fila.append(A[i][j]) 
+        transpuesta.append(nueva_fila)
 
-    La transpuesta intercambia filas por columnas: A_t[j][i] = A[i][j].
+    return transpuesta
 
-    Equivalente en NumPy: A.T o np.transpose(A)
-
-    Args:
-        A: La matriz de entrada.
-
-    Returns:
-        Matriz: La matriz transpuesta.
-
-    Ejemplo:
-        >>> transpose([[1, 2, 3], [4, 5, 6]])
-        [[1, 4], [2, 5], [3, 6]]
-
-    Pista: Usa zip(*A) o listas por comprensión
-    """
-    raise NotImplementedError("Función no implementada.")
 
 
 # -------------------------------------------------------------------
@@ -152,7 +144,7 @@ def dot(v: Vector, w: Vector) -> float:
         for n, m in zip(v, w):
             producto = n * m
             producto_punto += producto
-
+            
         return producto_punto
 
     else:
@@ -238,8 +230,15 @@ def norm(v: Vector) -> float:
 
     Pista: Usa dot(v, v) y luego sqrt() del módulo math
     """
-    raise NotImplementedError("Función no implementada.")
 
+    import math 
+    suma = 0 
+    for x in v:
+        suma += x**2
+    norma = sqrt(suma)
+    return norma 
+    
+    
 
 # -------------------------------------------------------------------
 # Sección 4: Operaciones con Matrices (⭐⭐ Intermedio)
@@ -378,6 +377,7 @@ def det(A: Matriz) -> float:
     - Caso 3×3+: expansión por primera fila (recursivo)
     """
     raise NotImplementedError("Función no implementada.")
+
 
 
 
