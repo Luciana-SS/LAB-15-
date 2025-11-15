@@ -30,26 +30,16 @@ Matriz = list[list[float]]
 
 
 def zeros(shape: tuple[int, int]) -> Matriz:
-    """Crea una matriz rellena de ceros.
-
-    Equivalente en NumPy: np.zeros(shape)
-
-    Args:
-        shape: Tupla (filas, columnas) que define las dimensiones.
-
-    Returns:
-        Matriz: Una matriz de shape con valores 0.0.
-
-    Ejemplo:
-        >>> zeros((2, 3))
-        [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
-
-    Pista: Usa listas por comprensión anidadas
-    """
-    raise NotImplementedError("Función no implementada.")
-   
-
-
+    filas = shape[0]
+    columnas = shape [1]
+    matriz_zeros = []
+    for i in range(filas):
+        fila = []
+        for j in range(columnas):
+            fila.append(0)
+            matriz_zeros.append(fila)
+    return matriz_zeros
+    
 
 def ones(shape: tuple[int, int]) -> Matriz:
     matriz_unos = []
@@ -388,6 +378,7 @@ def det(A: Matriz) -> float:
     - Caso 3×3+: expansión por primera fila (recursivo)
     """
     raise NotImplementedError("Función no implementada.")
+
 
 
 
