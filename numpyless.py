@@ -52,23 +52,19 @@ def zeros(shape: tuple[int, int]) -> Matriz:
 
 
 def ones(shape: tuple[int, int]) -> Matriz:
-    """Crea una matriz rellena de unos.
+    matriz = []
+    columnas = shape[1]
+    filas = shape[0]
+    columna = []
 
-    Equivalente en NumPy: np.ones(shape)
+    for i in range(filas):
+        columna.append(1.0)
 
-    Args:
-        shape: Tupla (filas, columnas) que define las dimensiones.
+    for i in range(columnas):
+        matriz.append(columna)
 
-    Returns:
-        Matriz: Una matriz de shape con valores 1.0.
+    return matriz
 
-    Ejemplo:
-        >>> ones((2, 2))
-        [[1.0, 1.0], [1.0, 1.0]]
-
-    Pista: Similar a zeros() pero con 1.0
-    """
-    raise NotImplementedError("Función no implementada.")
 
 
 
@@ -403,3 +399,4 @@ def det(A: Matriz) -> float:
     - Caso 3×3+: expansión por primera fila (recursivo)
     """
     raise NotImplementedError("Función no implementada.")
+
