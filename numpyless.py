@@ -132,27 +132,7 @@ def dot(v: Vector, w: Vector) -> float:
 
 
 def add(v: Vector, w: Vector) -> Vector:
-    """Suma dos vectores elemento a elemento.
-
-    Equivalente en NumPy: v + w
-
-    Args:
-        v: El primer vector.
-        w: El segundo vector.
-
-    Returns:
-        Vector: El vector resultante de la suma.
-
-    Raises:
-        ValueError: Si los vectores no tienen la misma dimensión.
-
-    Ejemplo:
-        >>> add([1, 2], [3, 4])
-        [4.0, 6.0]
-
-    Pista: Usa listas por comprensión con zip()
-    """
-    
+ 
     dimension_v = len(v)
     dimension_w = len(w)
 
