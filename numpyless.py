@@ -254,27 +254,7 @@ def add_matrices(A: Matriz, B: Matriz) -> Matriz:
     else:
         raise ValueError("Las matrices no se pueden sumar")
         
-    """Suma dos matrices elemento a elemento.
-
-    Equivalente en NumPy: A + B
-
-    Args:
-        A: La primera matriz.
-        B: La segunda matriz.
-
-    Returns:
-        Matriz: La matriz resultante de la suma.
-
-    Raises:
-        ValueError: Si las matrices no tienen la misma forma.
-
-    Ejemplo:
-        >>> add_matrices([[1, 2], [3, 4]], [[5, 6], [7, 8]])
-        [[6.0, 8.0], [10.0, 12.0]]
-
-    Pista: Suma elemento a elemento, fila por fila
-    """
-    raise NotImplementedError("Función no implementada.")
+    
 
 
 def multiply_matrix(c: float, A: Matriz) -> Matriz:
@@ -385,6 +365,7 @@ def det(A: Matriz) -> float:
     - Caso 3×3+: expansión por primera fila (recursivo)
     """
     raise NotImplementedError("Función no implementada.")
+
 
 
 
