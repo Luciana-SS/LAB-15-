@@ -340,7 +340,7 @@ def det(A: Matriz) -> float:
                 if j != columna:
                     fila_nueva.append(A[i][j])
             submatriz.append(fila_nueva)
-        resultado += signo * A[0][col] * det(submatriz)
+        resultado += signo * A[0][columna] * det(submatriz)
     return resultado
 
 
