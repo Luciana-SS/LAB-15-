@@ -221,24 +221,7 @@ def add_matrices(A: Matriz, B: Matriz) -> Matriz:
 
 
 def multiply_matrix(c: float, A: Matriz) -> Matriz:
-    """Multiplica cada elemento de una matriz por un escalar.
-
-    Equivalente en NumPy: c * A
-
-    Args:
-        c: El escalar.
-        A: La matriz.
-
-    Returns:
-        Matriz: La matriz resultante escalada.
-
-    Ejemplo:
-        >>> multiply_matrix(2, [[1, 2], [3, 4]])
-        [[2.0, 4.0], [6.0, 8.0]]
-
-    Pista: Similar a multiply() pero para cada fila
-    """
-
+ 
     filas = len (A)
     columnas = len(A[0])
 
