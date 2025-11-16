@@ -364,11 +364,37 @@ def det(A: Matriz) -> float:
     - Caso 2×2: usa la fórmula directa
     - Caso 3×3+: expansión por primera fila (recursivo)
     """
-    raise NotImplementedError("Función no implementada.")
+    n = len(A)
+    m = len(A[0])
 
+    if n != m:
+        print("La matriz debe ser cuadrada")
+        return 
+    if n == 1:
+        return A[0][0]
 
+    if n == 2:
+        a = A[0][0]
+        b = A[0][1]
+        c = A[1][0]
+        d = A[1][1]
+        det = a*d - b*c
+        return det 
 
-
-
+    resultado = 0
+    for columna in range(n):
+        if columna % 2 == 0:
+            signo = 1
+        else:
+            signo = -1
+        submatriz = []
+        for i in range(1, n):
+            fila_nueva = []
+            for j in range(n):
+                if j != columna:
+                    fila_nueva.append(A[i][j])
+            submatriz.append(fila_nueva)
+        resultado += signo * A[0][col] * det(submatriz)
+    return resultado
 
 
