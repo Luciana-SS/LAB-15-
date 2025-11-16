@@ -56,24 +56,7 @@ def ones(shape: tuple[int, int]) -> Matriz:
 
 
 def identity(n: int) -> Matriz:
-    """Crea una matriz identidad cuadrada.
 
-    Equivalente en NumPy: np.identity(n)
-
-    Args:
-        n: El tamaño (número de filas y columnas) de la matriz.
-
-    Returns:
-        Matriz: Una matriz identidad de n x n.
-
-    Ejemplo:
-        >>> identity(3)
-        [[1.0, 0.0, 0.0],
-         [0.0, 1.0, 0.0],
-         [0.0, 0.0, 1.0]]
-
-    Pista: La diagonal tiene 1.0 cuando fila == columna
-    """
     columnas = n
     filas = n
 
