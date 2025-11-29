@@ -80,6 +80,11 @@ def identity(n: int) -> Matriz:
 
 
 def shape(A: Matriz) -> tuple[int, int]:
+    filas = len(A)
+    columnas = len(A[0])
+
+    return filas, columnas
+    
     """Devuelve las dimensiones de una matriz como (filas, columnas).
 
     Equivalente en NumPy: A.shape
@@ -96,7 +101,7 @@ def shape(A: Matriz) -> tuple[int, int]:
 
     Pista: len(A) da filas, len(A[0]) da columnas
     """
-    raise NotImplementedError("Función no implementada.")
+
 
 
 def transpose(A: Matriz) -> Matriz:
