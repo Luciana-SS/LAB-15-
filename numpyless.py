@@ -189,11 +189,10 @@ def norm(v: Vector) -> float:
     Pista: Usa dot(v, v) y luego sqrt() del módulo math
     """
 
-    import math 
     suma = 0 
     for x in v:
         suma += x**2
-    norma = sqrt(suma)
+    norma = (suma)**(1/2)
     return norma 
     
     
