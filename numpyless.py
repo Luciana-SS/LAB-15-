@@ -31,6 +31,7 @@ Matriz = list[list[float]]
 
 def zeros(shape: tuple[int, int]) -> Matriz:
     filas = shape[0]
+    print ("hola")
     columnas = shape [1]
     matriz_zeros = []
     for i in range(filas):
