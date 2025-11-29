@@ -31,13 +31,14 @@ Matriz = list[list[float]]
 
 def zeros(shape: tuple[int, int]) -> Matriz:
     filas = shape[0]
-    columnas = shape[1]
+    columnas = shape [1]
     matriz_zeros = []
-    for i in range(filas):          
+    for i in range(filas):
         fila = []
-        for j in range(columnas):   
-            fila.append(0.0)
-        matriz_zeros.append(fila)
+    for j in range(columnas):
+        fila.append(0.0)
+    matriz_zeros.append(fila)
+    
     return matriz_zeros
     
 
