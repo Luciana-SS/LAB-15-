@@ -154,6 +154,12 @@ def add(v: Vector, w: Vector) -> Vector:
     
 
 def multiply(c: float, v: Vector) -> Vector:
+    nuevo_vector = []
+    for elemento in v:
+        nuevo_vector.append(elemento*c)
+
+    return nuevo_vector
+    
     """Multiplica cada elemento de un vector por un escalar.
 
     Equivalente en NumPy: c * v
@@ -171,7 +177,7 @@ def multiply(c: float, v: Vector) -> Vector:
 
     Pista: Multiplica c por cada elemento
     """
-    raise NotImplementedError("Función no implementada.")
+
 
 
 def norm(v: Vector) -> float:
