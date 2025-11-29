@@ -234,7 +234,6 @@ def multiply_matrix(c: float, A: Matriz) -> Matriz:
             nueva_fila.append(multiplicacion)
 
         Matriz.append(nueva_fila)
-        #Hola
 
     return Matriz
 
