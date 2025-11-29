@@ -251,6 +251,43 @@ def multiply_matrix(c: float, A: Matriz) -> Matriz:
 
 
 def matmul(A: Matriz, B: Matriz | Vector) -> Matriz | Vector:
+    #Primero, separar entre matriz y vector 
+    #Si es vector:
+    if isinstance(B[0], (float, int)):
+        # B es vector
+        if len(A[0]) == len(B):
+            C = []
+
+            for i in range(len(A)):
+                suma = 0
+                for j in range(len(A[0])):
+                    suma += A[i][j]*B[j]
+                C.append(suma)
+            
+            return C
+        else:
+            raise ValueError ("No se puede multiplicar")
+
+    # Si no es vector es matriz    
+    else: 
+        if len(A[0]) == len(B):
+            C = []
+            for i in range(len(A)):
+                C.append([])
+            
+            for j in range(len(A)):
+                for k in range(len(B[0])):
+                    C[j].append(0) 
+
+            for i in range(len(A)):
+                for j in range(len(B[0])):
+                    for k in range(len(B)):
+                        C[i][j] += A[i][k]*B[k][j]
+            
+            return C
+    
+        else:
+            raise ValueError ("No se puede multiplicar")
     """Multiplica una matriz A por una matriz B o vector v.
 
     Regla: El número de columnas de A debe ser igual al número de
@@ -260,7 +297,7 @@ def matmul(A: Matriz, B: Matriz | Vector) -> Matriz | Vector:
 
     Args:
         A: La matriz izquierda (m × n).
-        B: La matriz derecha (n × p) o vector (n).
+        B: La matriz derecha (n × p) o vector (nx1).
 
     Returns:
         Matriz (m × p) o Vector (m): El resultado de la multiplicación.
@@ -278,7 +315,6 @@ def matmul(A: Matriz, B: Matriz | Vector) -> Matriz | Vector:
     Pista: Para matrices, cada elemento resultado[i][j] es el
            producto punto de la fila i de A con la columna j de B
     """
-    raise NotImplementedError("Función no implementada.")
 
 
 # -------------------------------------------------------------------
