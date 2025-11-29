@@ -36,7 +36,7 @@ def zeros(shape: tuple[int, int]) -> Matriz:
     for i in range(filas):
         fila = []
         for j in range(columnas):
-            fila.append(0)
+            fila.append(0.0)
             matriz_zeros.append(fila)
     return matriz_zeros
     
