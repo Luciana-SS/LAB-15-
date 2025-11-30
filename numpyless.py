@@ -45,11 +45,11 @@ def ones(shape: tuple[int, int]) -> Matriz:
     matriz_unos = []
     columnas = shape[1]
     filas = shape[0]
-    columna = []
-    for i in range(filas):
-        columna.append(1.0)
+    fila = []
     for i in range(columnas):
-        matriz_unos.append(columna)
+        fila.append(1.0)
+    for i in range(filas):
+        matriz_unos.append(fila)
     return matriz_unos
 
 
@@ -388,5 +388,6 @@ def det(A: Matriz) -> float:
             submatriz.append(fila_nueva)
         resultado += signo * A[0][columna] * det(submatriz)
     return resultado
+
 
 
