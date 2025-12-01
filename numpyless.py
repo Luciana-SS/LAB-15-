@@ -45,11 +45,11 @@ def ones(shape: tuple[int, int]) -> Matriz:
     matriz_unos = []
     columnas = shape[1]
     filas = shape[0]
-    columna = []
-    for i in range(filas):
-        columna.append(1.0)
+    fila = []
     for i in range(columnas):
-        matriz_unos.append(columna)
+        fila.append(1.0)
+    for i in range(filas):
+        matriz_unos.append(fila)
     return matriz_unos
 
 
@@ -359,26 +359,28 @@ def det(A: Matriz) -> float:
     n = len(A)
     m = len(A[0])
 
-    if n != m:
-        print("La matriz debe ser cuadrada")
-        return 
-    if n == 1:
-        return A[0][0]
+    for fila in A:
+        if len(fila) != m:
+            raise ValueError("Todas las filas deben tener la misma longitud")
 
+    if n != m:
+        raise ValueError("La matriz debe ser cuadrada")
+
+    if n == 1:
+        return float(A[0][0])
     if n == 2:
         a = A[0][0]
         b = A[0][1]
         c = A[1][0]
         d = A[1][1]
-        det = a*d - b*c
-        return det 
+        resultado = a * d - b * c 
+        return float(resultado)
 
-    resultado = 0
+    resultado = 0.0
     for columna in range(n):
-        if columna % 2 == 0:
-            signo = 1
-        else:
-            signo = -1
+        signo = 1 if columna % 2 == 0 else -1
+
+        # Construir submatriz eliminando fila 0 y columna columna
         submatriz = []
         for i in range(1, n):
             fila_nueva = []
@@ -386,7 +388,10 @@ def det(A: Matriz) -> float:
                 if j != columna:
                     fila_nueva.append(A[i][j])
             submatriz.append(fila_nueva)
+
         resultado += signo * A[0][columna] * det(submatriz)
+
     return resultado
+
 
 
